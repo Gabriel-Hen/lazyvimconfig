@@ -25,7 +25,7 @@ vim.diagnostic.config({
     },
 })
 
-vim.g.autoformat = false
+vim.g.autoformat = true
 
 vim.g.clipboard = {
     name = "WslClipboard",
