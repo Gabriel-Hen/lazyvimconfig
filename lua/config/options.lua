@@ -11,6 +11,7 @@ vim.opt.tabstop = 4 -- Define o tamanho visual do tab como 4 espaços
 vim.opt.softtabstop = 4 -- Define o tamanho do tab ao editar (pressionar Tab)
 vim.opt.shiftwidth = 4 -- Define o tamanho da indentação (usado por >>, <<, etc.)
 vim.opt.expandtab = true -- Converte tabs em espaços
+vim.opt.colorcolumn = "120"
 
 -- mostra somente erros no inline do phpactor
 vim.diagnostic.config({
@@ -33,7 +34,7 @@ vim.g.clipboard = {
         ["+"] = "clip.exe",
         ["*"] = "clip.exe",
     },
-      paste = {
+    paste = {
         ["+"] = "powershell.exe -noprofile -command Get-Clipboard",
         ["*"] = "powershell.exe -noprofile -command Get-Clipboard",
     },

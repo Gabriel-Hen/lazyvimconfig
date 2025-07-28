@@ -12,14 +12,20 @@
 }
 ]]
 
-
 return {
-  { "arcticicestudio/nord-vim" },
-
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "nord",
+    {
+        "arcticicestudio/nord-vim",
+        lazy = true,
+        config = function()
+            vim.g.nord_borders = true -- Habilita bordas, se desejar
+            vim.g.nord_contrast = true -- Aumenta o contraste, se desejar
+            vim.g.nord_disable_background = true
+        end,
     },
-  },
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "nord",
+        },
+    },
 }
