@@ -12,7 +12,8 @@ vim.opt.softtabstop = 4 -- Define o tamanho do tab ao editar (pressionar Tab)
 vim.opt.shiftwidth = 4 -- Define o tamanho da indentação (usado por >>, <<, etc.)
 vim.opt.expandtab = true -- Converte tabs em espaços
 vim.opt.colorcolumn = "120"
-
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 -- mostra somente erros no inline do phpactor
 vim.diagnostic.config({
     virtual_text = {
@@ -29,14 +30,14 @@ vim.diagnostic.config({
 vim.g.autoformat = true
 
 vim.g.clipboard = {
-    name = "WslClipboard",
+    name = "win32yank",
     copy = {
-        ["+"] = "clip.exe",
-        ["*"] = "clip.exe",
+        ["+"] = "win32yank.exe -i",
+        ["*"] = "win32yank.exe -i",
     },
     paste = {
-        ["+"] = "powershell.exe -noprofile -command Get-Clipboard",
-        ["*"] = "powershell.exe -noprofile -command Get-Clipboard",
+        ["+"] = "win32yank.exe -o",
+        ["*"] = "win32yank.exe -o",
     },
     cache_enabled = false,
 }
