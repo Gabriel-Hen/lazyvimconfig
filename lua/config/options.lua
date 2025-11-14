@@ -6,6 +6,8 @@ vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4 -- Define o tamanho visual do tab como 4 espaços
 vim.opt.softtabstop = 4 -- Define o tamanho do tab ao editar (pressionar Tab)
