@@ -3,7 +3,7 @@ dap.adapters.php = {
     type = "executable",
     command = "node",
     args = { vim.fn.stdpath("data") .. "/mason/packages/php-debug-adapter/extension/out/phpDebug.js" },
-    host = "127.0.0.1",
+    -- host = "127.0.0.1",
 }
 dap.configurations.php = {
     {
@@ -12,7 +12,7 @@ dap.configurations.php = {
         request = "launch",
         -- porta que o Xdebug “empurra” o evento de debug
         port = 9000,
-        hostname = "127.0.0.1",
+        -- hostname = "127.0.0.1",
         -- log = true,
         -- em geral 127.0.0.1 já funciona, mas se você configurou outro host:
         -- mapeamento de caminhos: container → host (WSL)
